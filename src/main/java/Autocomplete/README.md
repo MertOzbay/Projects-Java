@@ -19,6 +19,6 @@ Given a prefix String, returns a List of word Strings according to the order spe
 
 *pickCandidate("spo", "spooky")*
 
-*getCandidates("spo")* returns **\["spooky", "spoach", "spock", "spode"\]**
+*getCandidates("spo")* returns **\["spooky", "spoach", "spock", "spode", ... \]**
 
 Specifies the word picked after inputting the prefix to the *getCandidates()* method. The Trie is updated to return the updated list the next time same prefixed is used.
