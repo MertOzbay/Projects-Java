@@ -8,16 +8,16 @@ I use a Trie data structure to efficiently store and travers all of the words in
 
 Both of the classes have two fundamental methods:
 
-* *public List<String> *getCandidates(String prefix)*: 
+* *public* *List<String>* *getCandidates(String prefix)*: 
 
 Given a prefix String, returns a List of word Strings according to the order specified by the class
 
-getCandidates("spo") returns \["spoach", "spock", "spode", ... \]
+*getCandidates("spo")* returns **\["spoach", "spock", "spode", ... \]
 
-* public void pickCandidate(String prefix, String candidate):
+* *public* *void* *pickCandidate(String prefix, String candidate)*:
 
-pickCandidate("spo", "spooky")
+*pickCandidate("spo", "spooky")*
 
-getCandidates("spo") returns \["spooky", "spoach", "spock", "spode"\]
+*getCandidates("spo")* returns **\["spooky", "spoach", "spock", "spode"\]
 
 Specifies the word picked after inputting the prefix to the getCandidates() method. The Trie is updated to return the updated list the next time same prefixed is used.
