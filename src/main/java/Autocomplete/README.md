@@ -8,7 +8,7 @@ I use a Trie data structure to efficiently store and travers all of the words in
 
 Both of the classes have two fundamental methods:
 
-* *public* *List*<*String> *getCandidates(String prefix)*: 
+* *public List<String> *getCandidates(String prefix)*: 
 
 Given a prefix String, returns a List of word Strings according to the order specified by the class
 
