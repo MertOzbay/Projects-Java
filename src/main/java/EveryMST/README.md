@@ -7,3 +7,5 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The challenge in this task is to make sure we produce every possible Spanning Tree but do not make copies of the same tree more than once. The logic I follow looks like this:
 
 ![screenshot_image](./descriptive_image.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I start with the source vertex and go through incoming edges. I pick one edge and build every possible Spanning Tree recursively. Then I remove that edge and move onto the next one, going through all incoming edges and generating all spanning trees. I follow this logic at every recursive level, continuing until an MST is complete or the total weight of the Spanning Tree exceeds the minimum, in which case it is discarded.
