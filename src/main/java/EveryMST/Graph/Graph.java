@@ -88,39 +88,4 @@ public class Graph {
         return false;
     }
 
-
-    public List<Integer> topological_sort(boolean depthFirst){
-
-        Deque<Integer> global = getVerticesWithNoIncomingEdges();
-        List<Deque<Edge>> outgoingEdgesAll = getOutgoingEdges();
-        List<Integer> order  = new ArrayList<>();
-
-        while (!global.isEmpty()){
-            Deque<Integer> local = new ArrayDeque<>();
-
-            int vertex = global.poll();
-            order.add(vertex);
-            Deque<Edge> outgoingEdges = outgoingEdgesAll.get(vertex);
-
-            while (!outgoingEdges.isEmpty()){
-                Edge edge = outgoingEdges.poll();
-
-                List<Edge> incomingEdges = getIncomingEdges(edge.getTarget());
-                incomingEdges.remove(edge);
-
-                if(incomingEdges.isEmpty()){
-                    local.add(edge.getTarget());
-                }
-            }
-
-            while (!local.isEmpty()){
-                if (depthFirst) global.addFirst(local.removeLast());
-                else global.addLast(local.removeFirst());
-            }
-        }
-
-        if (!hasNoEdge()) throw new IllegalArgumentException("The graph is cyclic!");
-
-        return order;
-    }
 }
