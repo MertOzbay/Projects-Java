@@ -1,4 +1,4 @@
-#EveryMST
+# EveryMST
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This was a project for my Data Structures and Algorithms class. I wrote a program that generates every Minimum Spanning Tree (MST). Given a graph with weighted edges, _getMinimumSpanningTrees()_ will return a list of SpanningTrees of the graph where all members of the list are MSTs.
 
